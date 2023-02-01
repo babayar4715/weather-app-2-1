@@ -1,6 +1,6 @@
 class Weather {
   Weather({
-    required this.country,
+    this.country,
     required this.id,
     required this.main,
     required this.description,
@@ -14,5 +14,5 @@ class Weather {
   final String icon;
   final String city;
   final double temp;
-  final String country;
+  final String? country;
 }
