@@ -29,10 +29,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Weather? weather;
   Future<void> weatherLocation() async {
+    // bul jerde bizde <void> bar eken bul bul jerde bizge funcsianyn generigi katary kelgen jana bul menen biz fucsiany ech kanday resultat kaytaryp berbeshi ychyn koldonsok boloot
+    // async bul bizge serverden datany alyp kelgende al data ekranga chykkancha kutup tyrat je al datany alyp kelgenge jardam beret
     setState(() {
+      // setstate bizge bashynan build kylyp bergende anga berilgen weather = null; bul anyn astynda korsotylgondoy circle prograss indicatordy chygaryp beret
       weather = null;
     });
     LocationPermission permission = await Geolocator.checkPermission();
+    // location permission
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.always &&
