@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_application_weather_continuing/constants/appColors.dart';
+import 'package:flutter_application_weather_continuing/srcc/constants/appColors.dart';
 
 class AppTextStyle {
   static const AppBarStyle =
